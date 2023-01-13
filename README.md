@@ -1,3 +1,7 @@
+### Instructions
+1. You have to do this assignement in a group of 2.
+2. You can ask your doubts in the slack channel `assignment-1` and one of the TAs will clarify it.
+
 ### Questions
 
 1. Complete the decision tree implementation in tree/base.py. **[5 marks]**
@@ -62,5 +66,3 @@ The code should be written in Python and not use existing libraries other than t
 
 
 You can answer the subjectve questions (timing analysis, displaying plots) by creating `assignment_q<question-number>_subjective_answers.md`
-
-Doubts about the assignment may be clarified here: https://docs.google.com/document/d/1pbRy9XZvTa3uexGsONdo_ik73jsTEphPW__NOrHqZCs/edit?usp=sharing
