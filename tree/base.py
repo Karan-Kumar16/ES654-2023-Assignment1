@@ -6,44 +6,35 @@ You will be expected to use this to make trees for:
 > real input, discrete output
 > discrete input, real output
 """
+from dataclasses import dataclass
+from typing import Literal
 
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from .utils import entropy, information_gain, gini_index
+from tree.utils import entropy, information_gain, gini_index
 
 np.random.seed(42)
 
-class DecisionTree():
-    def __init__(self, criterion, max_depth):
-        """
-        Put all infromation to initialize your tree here.
-        Inputs:
-        > criterion : {"information_gain", "gini_index"} # criterion won't be used for regression
-        > max_depth : The maximum depth the tree can grow to 
-        """
-        pass
 
-    def fit(self, X, y):
+@dataclass
+class DecisionTree:
+    criterion: Literal["information_gain", "gini_index"]  # criterion won't be used for regression
+    max_depth: int  # The maximum depth the tree can grow to
+
+    def fit(self, X: pd.DataFrame, y: pd.Series) -> None:
         """
         Function to train and construct the decision tree
-        Inputs:
-        X: pd.DataFrame with rows as samples and columns as features (shape of X is N X P) where N is the number of samples and P is the number of columns.
-        y: pd.Series with rows corresponding to output variable (shape of Y is N)
         """
         pass
 
-    def predict(self, X):
+    def predict(self, X: pd.DataFrame) -> pd.Series:
         """
-        Funtion to run the decision tree on a data point
-        Input:
-        X: pd.DataFrame with rows as samples and columns as features
-        Output:
-        y: pd.Series with rows corresponding to output variable. THe output variable in a row is the prediction for sample in corresponding row in X.
+        Funtion to run the decision tree on test inputs
         """
         pass
 
-    def plot(self):
+    def plot(self) -> None:
         """
         Function to plot the tree
 
